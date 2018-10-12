@@ -1,0 +1,14 @@
+{:secrets #include #join [#env HOME "/.secrets.edn"]
+
+ :redis
+ {:uri #or [#env REDIS_URI "redis://127.0.0.1:6379"]}
+
+ :store
+ {:type #profile {:default :mem :prod :redis}}
+
+ :captcha
+ {:url "https://www.google.com/recaptcha/api/siteverify"
+  :secret #or [#env CAPTCHA_SECRET_KEY #ref [:secrets :captcha-key]]}
+
+ :server
+ {:port #long #or [#env HTTP_PORT 8080]}}

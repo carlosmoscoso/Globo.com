@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <title>Paredão BBB</title>
+  </head>
+  <body>
+    <div class="container">
+      <form id="Poll">
+        <div class="center header">
+          <img src="images/wall.png" />QUEM DEVE SER <b>ELIMINADO</b>?
+        </div>
+        <hr>
+        <div class="row">
+          <div class="column">
+            <h4>Sister</h4>
+          </div>
+          <div class="column">
+            <h4>Brother</h4>
+          </div>
+        </div>
+        <div class="center row">
+          <div class="column">
+            <label>
+              <input id="Radio1" type="radio" name="candidate" value="Sister" />
+              <img src="images/sister.png" class="center" />
+            </label>
+          </div>
+          <div class="column">
+            <label>
+              <input id="Radio2" type="radio" name="candidate" value="Brother" />
+              <img src="images/brother.png" class="center" />
+            </label>
+          </div> 
+        </div>
+        <div class="center row">
+          <div class="column">
+            <p id="Sister">Para eliminar a <b>Sister</b> pelo telefone disque <b>0800-123-001</b> ou mande um SMS para <b>8001</b></p>
+          </div>
+          <div class="column">
+            <p id="Brother">Para eliminar o <b>Brother</b> pelo telefone disque <b>0800-123-002</b> ou mande um SMS para <b>8002</b></p>
+          </div>
+        </div>
+        <div id="Footer" class="center jumbotron">
+          <button type="button" class="btn btn-primary" onclick="submitvote()">Envie seu voto agora</button>
+        </div>
+        <div id="Captcha" class="g-recaptcha" data-sitekey="INSIRA_CHAVE_PUBLICA_DO_CAPTCHA"></div>
+      </form>
+    </div>
+  </body>
+</html>

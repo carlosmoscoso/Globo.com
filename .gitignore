@@ -1,0 +1,13 @@
+poll-service/target
+poll-service/classes
+poll-service/checkouts
+pom.xml
+pom.xml.asc
+*.jar
+*.class
+.lein-*
+.nrepl-port
+.hgignore
+.hg/
+.classpath
+.DS_Store
